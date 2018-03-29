@@ -41,7 +41,7 @@ Switch to the application directory to examine and test what you’ve built.
 
 `$ rvm install 2.2.5`
 
-`$ cd WebC  rawler`
+`$ cd WebCrawler`
 
 `$ gem install bundler`
 
