@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: crawler_development
+
+test:
+  <<: *default
+  database: crawler_test
+
+production:
+  <<: *default
+  database: crawler_production
+  username: crawler
+  password: <%= ENV['CRAWLER_DATABASE_PASSWORD'] %>
