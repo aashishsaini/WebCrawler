@@ -26,7 +26,7 @@ RspecApiDocumentation.configure do |config|
   config.keep_source_order = true
 
   # Change the name of the API on index pages
-  config.api_name = "Crawler API documentation"
+  config.api_name = "Web Crawler API documentation"
 
   # Change how the post body is formatted by default, you can still override by `raw_post`
   # Can be :json, :xml, or a proc that will be passed the params

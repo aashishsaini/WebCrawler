@@ -1,12 +1,12 @@
 class Page < ActiveRecord::Base
   validates :url, presence: true
-  validate :url_accessible?, if: "Rails.env.production?"
-
+  validate :url_accessible?, if: "not Rails.env.test?"
   before_create :set_content
 
   def set_content
-    self.content ||= Scraper.new(self.url).call
+    self.content ||= Extractor.new(self.url).call
   end
+
   private :set_content
 
   def url_accessible?
@@ -18,6 +18,6 @@ class Page < ActiveRecord::Base
     end
     errors.add(:url, 'is not valid or it cannot be accessed at this moment') unless success
   end
-  private :url_accessible?
 
+  private :url_accessible?
 end

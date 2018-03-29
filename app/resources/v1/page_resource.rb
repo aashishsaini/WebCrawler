@@ -8,9 +8,7 @@ module V1
         super - [:content]
       end
 
-      def updatable_fields(context)
-        []
-      end
+      def updatable_fields(context);[]; end
     end
   end
 end

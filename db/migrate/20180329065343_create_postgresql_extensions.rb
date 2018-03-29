@@ -1,4 +1,4 @@
-class EnablePsqlExtensions < ActiveRecord::Migration
+class CreatePostgresqlExtensions < ActiveRecord::Migration
   def change
     enable_extension 'hstore'
     enable_extension 'uuid-ossp'
