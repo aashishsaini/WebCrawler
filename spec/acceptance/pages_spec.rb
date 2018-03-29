@@ -1,7 +1,7 @@
 require 'rspec_api_documentation_helper'
 
 RSpec.resource "Pages" do
-  header '"Content-Type", "application/vnd.api+json"'
+  header "Content-Type", "application/vnd.api+json"
 
   post '/v1/pages' do
     parameter 'type', <<-DESC, required: true
